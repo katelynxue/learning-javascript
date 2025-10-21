@@ -86,3 +86,29 @@ function sum(total, num) {
   return total + num;
 }
 console.log("Sum of filtered array: " + filteredArray.reduce(sum,0));
+
+fruitArray.forEach((item, index) => {
+  console.log(index + ": " + item);
+});
+
+class person {
+    constructor(name, age, birthday) {
+        this.name = name;
+        this.age = age;
+        this.birthday = birthday; 
+    }
+    print(){
+        console.log(this.name,this.age,this.birthday);
+    }
+}
+
+const person1 = new person("Katelyn", 18, "August 31st 2007")
+person1.print();
+
+const people = [["Katelyn", 18, "August 31st 2007"], ["Kim Kardashian", 45, "October 21st 1980"], ["Doja Cat", 30, "October 21 1995"], ["Suni Lee", 22, "March 9 2003"], ["Barbara Sprouse", 32, "October 8 1993"], ["Max Verstappen", 28, "September 30 1997"], ["Lando Norris", 25, "November 13 1999"], ["Oscar Piastri", 24, "April 6 2001"], ["Charles Leclerc", 28, "October 16 1997"],["Lewis Hamilton", 40, "January 7 1985"]];
+
+const peopleAges = people.filter(checkAge);
+
+function checkpeople(checkAge){
+
+}
