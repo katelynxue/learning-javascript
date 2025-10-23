@@ -103,14 +103,31 @@ class person {
 }
 
 const person1 = new person("Katelyn", 18, "August 31st 2007")
+const person2 = new person("Kim Kardashian", 45, "October 21st 1980")
+const person3 = new person("Doja Cat", 30, "October 21 1995")
+const person4 = new person("Suni Lee", 22, "March 9 2003")
+const person5 = new person("Barbara Sprouse", 32, "October 8 1993")
+const person6 = new person("Max Verstappen", 28, "September 30 1997")
+const person7 = new person("Lando Norris", 25, "November 13 1999")
+const person8 = new person("Oscar Piastri", 24, "April 6 2001")
+const person9 = new person("Charles Leclerc", 28, "October 16 1997")
+const person10 = new person("Lewis Hamilton", 40, "January 7 1985")
 person1.print();
 
-const people = [["Katelyn", 18, "August 31st 2007"], ["Kim Kardashian", 45, "October 21st 1980"], ["Doja Cat", 30, "October 21 1995"], ["Suni Lee", 22, "March 9 2003"], ["Barbara Sprouse", 32, "October 8 1993"], ["Max Verstappen", 28, "September 30 1997"], ["Lando Norris", 25, "November 13 1999"], ["Oscar Piastri", 24, "April 6 2001"], ["Charles Leclerc", 28, "October 16 1997"],["Lewis Hamilton", 40, "January 7 1985"]];
+const people = [person1, person2, person3, person4, person5, person6, person7, person8, person9, person10 ];
+// const stringArray = JSON.parse(people);
+// let birthday = stringArray[3];
+// console.log(birthday);
 
-const peopleAges = people.filter(checkAge);
+const peopleAges = people.filter((person)=>{
+
+ console.log(person.birthday);
+ return person >= "1986";
+});
 
 function checkAge(people){
-    return people >= "1986"
+   
+    
 }
 console.log(peopleAges);
 
