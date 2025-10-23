@@ -109,6 +109,8 @@ const people = [["Katelyn", 18, "August 31st 2007"], ["Kim Kardashian", 45, "Oct
 
 const peopleAges = people.filter(checkAge);
 
-function checkpeople(checkAge){
-
+function checkAge(people){
+    return people >= "1986"
 }
+console.log(peopleAges);
+
