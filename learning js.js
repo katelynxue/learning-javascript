@@ -115,19 +115,16 @@ const person10 = new person("Lewis Hamilton", 40, "January 7 1985")
 person1.print();
 
 const people = [person1, person2, person3, person4, person5, person6, person7, person8, person9, person10 ];
-// const stringArray = JSON.parse(people);
-// let birthday = stringArray[3];
-// console.log(birthday);
 
-const peopleAges = people.filter((person)=>{
-
- console.log(person.birthday);
- return person >= "1986";
-});
-
-function checkAge(people){
-   
-    
+for(i=0; i<people.length; i++){
+    if (people[i].name.startsWith("L")){
+        people[i].print();
+    }
 }
-console.log(peopleAges);
 
+const mapPeople = people.map(newFunction)
+
+function newFunction(ageNumber){
+    return ageNumber;
+}
+console.log(newFunction());
