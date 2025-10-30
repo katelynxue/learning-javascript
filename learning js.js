@@ -122,9 +122,24 @@ for(i=0; i<people.length; i++){
     }
 }
 
-const mapPeople = people.map(newFunction)
+const mapPeople = people.map(function(personObj) {
+  return personObj.age;
+});
 
-function newFunction(ageNumber){
-    return ageNumber;
+console.log(mapPeople);
+
+mapPeople.forEach(myFunction)
+function myFunction(item, index, arr) {
+  arr[index] = item + 10;
 }
-console.log(newFunction());
+
+console.log(mapPeople);
+
+
+let sortNumbers = 0;
+for (let i = 0; i < mapPeople.length - 1; i++){
+    let smallestNumber = Math.abs(numArray[i] - numArray[i + 1]);
+    if (sma > maxDistance){
+        maxDistance = distance;
+    }
+}
