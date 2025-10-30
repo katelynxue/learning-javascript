@@ -135,11 +135,18 @@ function myFunction(item, index, arr) {
 
 console.log(mapPeople);
 
+const largestNumber = Math.max(...mapPeople);
+console.log("Largest Number", largestNumber);
 
-let sortNumbers = 0;
-for (let i = 0; i < mapPeople.length - 1; i++){
-    let smallestNumber = Math.abs(numArray[i] - numArray[i + 1]);
-    if (sma > maxDistance){
-        maxDistance = distance;
+for(let k = 0; k < mapPeople.length -1; k++){
+    for (let i = 0; i < mapPeople.length - 1; i++){
+        if(mapPeople[i] >= mapPeople[i+1]){
+            let temp = mapPeople[i];
+            mapPeople[i] = mapPeople[i+1];
+            mapPeople[i+1] = temp;
+        }
     }
 }
+
+console.log("Sorted Numbers", mapPeople);
+
